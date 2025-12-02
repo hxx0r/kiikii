@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Заголовок -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Проверка Email"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginBottom="24dp" />
+
+    <!-- Поле ввода Email -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Введите email для проверки:"
+        android:textSize="16sp"
+        android:layout_marginBottom="8dp" />
+
+    <EditText
+        android:id="@+id/emailInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="example@gmail.com"
+        android:inputType="textEmailAddress"
+        android:maxLines="1"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Кнопка проверки -->
+    <Button
+        android:id="@+id/checkEmailButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:text="Проверить Email"
+        android:textAllCaps="false" />
+
+    <!-- Прогресс-бар -->
+    <ProgressBar
+        android:id="@+id/emailProgressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Результат проверки -->
+    <TextView
+        android:id="@+id/emailResultText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:lineSpacingExtra="4dp"
+        android:visibility="gone" />
+
+    <!-- Информационный блок -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="ℹ️ Для проверки email требуется API ключ Have I Been Pwned. В текущей версии доступна только демо-проверка."
+        android:textSize="14sp"
+        android:textColor="#666"
+        android:padding="8dp"
+        android:background="#f0f0f0" />
+
+</LinearLayout>
